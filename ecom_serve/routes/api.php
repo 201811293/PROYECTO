@@ -25,3 +25,15 @@ Route::get('cliente/{id}', 'ClienteController@show');
 Route::post('cliente', 'ClienteController@create');
 Route::put('cliente/{id}', 'ClienteController@update');
 Route::delete('cliente/{id}', 'ClienteController@destroy');
+
+Route::get('facultad', 'FacultadController@index');
+Route::get('facultad/{id}', 'FacultadController@show');
+Route::post('facultad', 'FacultadController@create');
+Route::put('facultad/{id}', 'FacultadController@update');
+Route::delete('facultad/{id}', 'FacultadController@destroy');
+
+Route::get('escuela', 'EscuelaController@index');
+Route::get('escuela/{id}', 'EscuelaController@show');
+Route::post('escuela', 'EscuelaController@create');
+Route::put('escuela/{id}', 'EscuelaController@update');
+Route::delete('escuela/{id}', 'EscuelaController@destroy');
