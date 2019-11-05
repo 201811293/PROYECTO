@@ -1,11 +1,12 @@
-<p>cliente-index works!</p>
+<p>school-index works!</p>
 <nav>
-  <a routerLink="/escuelaform" routerLinkActive="active">New Cliente</a> <br>
+  <a routerLink="/escuelaform" routerLinkActive="active">New school</a> <br>
 
 </nav>
 <div *ngFor="let e of list">
-    <span>{{ e.nombre }}</span>
-    <span>{{ e.apellido }}</span>
+    <span>{{ e.nombre }}</span> <br>
+    <span>{{ e.esta_acre }}</span>
+    <span>{{ e.id }}</span>
     <span><a routerLink="/escuelaform/{{ e.id }}" routerLinkActive="active">Edit</a></span>
     <span><button (click)="delete(e.id)">Delete</button></span>
 

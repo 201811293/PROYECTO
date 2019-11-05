@@ -14,10 +14,16 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ClienteIndexComponent } from './cliente-index/cliente-index.component';
+
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { TrabajoFormComponent } from './trabajo-form/trabajo-form.component';
+
 import { EscuelaIndexComponent } from './escuela-index/escuela-index.component';
-import { FacultadIndexComponent } from './facultad-index/facultad-index.component';
+import { EscuelaFormComponent } from './escuela-form/escuela-form.component';
+
+import { FaculIndexComponent } from './facul-index/facul-index.component';
+import { FacultadFormComponent } from './facultad-form/facultad-form.component';
+
 
 
 const appRoutes: Routes = [
@@ -34,9 +40,15 @@ const appRoutes: Routes = [
   { path: 'trabajoform/:id',  component: TrabajoFormComponent },
 
   { path: 'escuela',  component: EscuelaIndexComponent },
-  { path: 'facultad',  component: FacultadIndexComponent },
+  { path: 'escuelaform',  component: EscuelaFormComponent },
+  { path: 'escuelaform/:id',  component: EscuelaFormComponent },
 
+  { path: 'facultad',  component: FaculIndexComponent },
+  { path: 'facultadform',  component: FacultadFormComponent },
+  { path: 'facultadform/:id',  component: FacultadFormComponent },
+  
 
+  
   { path: '**', component: PageNotFoundComponent },
 
 ];
@@ -54,7 +66,9 @@ const appRoutes: Routes = [
     ClienteFormComponent,
     TrabajoFormComponent,
     EscuelaIndexComponent,
-    FacultadIndexComponent
+    FaculIndexComponent,
+    FacultadFormComponent,
+    EscuelaFormComponent,
 
   ],
   imports: [

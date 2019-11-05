@@ -8,6 +8,7 @@ import { ClienteService } from '../services/cliente.service';
   styleUrls: ['./cliente-index.component.css']
 })
 export class ClienteIndexComponent implements OnInit {
+ 
   list: any;
   constructor(
     private route: ActivatedRoute,
