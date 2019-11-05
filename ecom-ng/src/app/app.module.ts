@@ -22,7 +22,7 @@ import { EscuelaIndexComponent } from './escuela-index/escuela-index.component';
 import { EscuelaFormComponent } from './escuela-form/escuela-form.component';
 
 import { FaculIndexComponent } from './facul-index/facul-index.component';
-import { FacultadFormComponent } from './facultad-form/facultad-form.component';
+import { FaculFormComponent } from './facul-form/facul-form.component';
 
 
 
@@ -44,8 +44,8 @@ const appRoutes: Routes = [
   { path: 'escuelaform/:id',  component: EscuelaFormComponent },
 
   { path: 'facultad',  component: FaculIndexComponent },
-  { path: 'facultadform',  component: FacultadFormComponent },
-  { path: 'facultadform/:id',  component: FacultadFormComponent },
+  { path: 'faculform',  component: FaculFormComponent },
+  { path: 'faculform/:id',  component: FaculFormComponent },
   
 
   
@@ -67,8 +67,8 @@ const appRoutes: Routes = [
     TrabajoFormComponent,
     EscuelaIndexComponent,
     FaculIndexComponent,
-    FacultadFormComponent,
     EscuelaFormComponent,
+    FaculFormComponent,
 
   ],
   imports: [
