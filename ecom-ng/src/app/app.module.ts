@@ -16,6 +16,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { ClienteIndexComponent } from './cliente-index/cliente-index.component';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { TrabajoFormComponent } from './trabajo-form/trabajo-form.component';
+import { ListarComponent } from './listar/listar.component';
 
 
 const appRoutes: Routes = [
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'clienteform/:id',  component: ClienteFormComponent },
   { path: 'trabajoform',  component: TrabajoFormComponent },
   { path: 'trabajoform/:id',  component: TrabajoFormComponent },
+  {path: 'listar', component: ListarComponent},
 
   { path: '**', component: PageNotFoundComponent },
 
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     ShippingComponent,
     ClienteIndexComponent,
     ClienteFormComponent,
-    TrabajoFormComponent
+    TrabajoFormComponent,
+    ListarComponent
 
   ],
   imports: [
