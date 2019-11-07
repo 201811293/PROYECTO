@@ -29,3 +29,14 @@ Route::get('escuela/show/{id}',"EscuelaController@show");
 Route::get('facultad/index',"FacultadController@index");
 Route::get('facultad/show/{id}',"FacultadController@show");
 
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

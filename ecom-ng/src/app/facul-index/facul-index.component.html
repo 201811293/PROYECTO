@@ -1,12 +1,42 @@
-<p>facultad-index works!</p>
+<H2><p>FACULTAD</p></H2>
+
+<!--
 <nav>
   <a routerLink="/faculform" routerLinkActive="active">New facultad</a> <br>
 
 </nav>
-<div *ngFor="let f of list">
-    <span>{{ f.nombre }}</span> <br>
-    <span>{{ f.id }}</span>
-    <span><a routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</a></span>
-    <span><button (click)="delete(f.id)">Delete</button></span>
+  
+    <div *ngFor="let f of list">
 
-</div>
+        <span>{{ f.id }}</span>
+        <span>{{ f.nombre }} </span>
+        
+        <span><button routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</button></span>
+        <span><button (click)="delete(f.id)">Delete</button></span>
+
+    </div>
+    -->
+    <nav>
+        <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/faculform">Nueva facultad</button>
+      <br>
+    </nav>
+<table class="table" >
+    <thead class="thead-dark">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>          
+        </tr>
+      </thead>
+  <tbody class="thead-dark" *ngFor="let f of list; index as i">
+    
+    <tr>
+      <th scope="col">{{ i+1}}</th>
+      <th scope="col">{{ f.id }}</th>
+      <th scope="col">{{ f.nombre }}</th>
+      <th scope="col"><button routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</button></th>
+      <th><button (click)="delete(d.id)">Delete</button></th>
+    </tr>
+    
+  </tbody>
+</table>
