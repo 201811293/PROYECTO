@@ -1,12 +1,38 @@
 <p>facultad-index works!</p>
-<nav>
+
+<body>
+  <table>
+    <thead>
+         <div *ngFor="let f of list">
+    <div class="card">
+          <tr>
+            <th>Facultad</th><th>ID</th>
+          </tr>
+        <div id = 'cabeza' class="card-header">
+          
+          <h4>
+          <span>{{ f.nombre }}</span> 
+          <span>{{ f.id }}</span>
+        </h4>
+        </div>
+        <div class="card-body">
+          <!-- Lista de usuarios-->
+          <label for="*">
+          <div>
+          <span><a routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</a></span>
+          <span><button (click)="delete(f.id)">Delete</button></span>
+          </div>
+          </label>
+        </div>
+      </div>
+</div>
+    </thead>
+   
+<div>
   <a routerLink="/faculform" routerLinkActive="active">New facultad</a> <br>
 
-</nav>
-<div *ngFor="let f of list">
-    <span>{{ f.nombre }}</span> <br>
-    <span>{{ f.id }}</span>
-    <span><a routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</a></span>
-    <span><button (click)="delete(f.id)">Delete</button></span>
-
+  
 </div>
+  </table>
+
+</body>

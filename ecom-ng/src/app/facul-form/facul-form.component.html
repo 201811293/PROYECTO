@@ -1,17 +1,34 @@
-<h1>Agregar </h1>
-<form [formGroup]="faculForm" (ngSubmit)="save()">
+<body>
+        <div class="card">
+                <div class="card-header">
+                    <h4>Editar</h4>
+                </div>
+                <div class="card-body">
+                     <label>
+                        Nombres:
+                        <input type="text" formControlName="nombre" name="nombre" id="nombre" required>
+                        <div [hidden]="faculForm.get('nombre').valid || 
+                        faculForm.get('nombre').pristine" class="alert alert-danger">
+                            Titulo is required
+                        </div>
+                        ID:
+                        <input type="text" formControlID="ID" name="ID" id="ID" required>
+                        <div [hidden]="faculForm.get('id').valid || 
+                        faculForm.get('id').pristine" class="alert alert-danger">
+                            Titulo is required
+                        </div>
+                    </label>
+                    <!-- Formulario de usuarios-->
+                </div>
+            </div>
+    <form [formGroup]="faculForm" (ngSubmit)="save()">
     
-    <label>
-        Nombres:
-        <input type="text" formControlName="nombre" name="nombre" id="nombre" required>
-        <div [hidden]="faculForm.get('nombre').valid || 
-        faculForm.get('nombre').pristine" class="alert alert-danger">
-            Titulo is required
-        </div>
-    </label>
+    
     <br>
     <button type="submit" [disabled]="!faculForm.valid" class="btn btn-primary">Save</button> 
 </form>
+
+</body> 
 
 
 <p>{{ faculForm.value | json }}</p>
