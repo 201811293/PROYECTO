@@ -35,7 +35,7 @@
       <th scope="col">{{ f.id }}</th>
       <th scope="col">{{ f.nombre }}</th>
       <th scope="col"><button routerLink="/faculform/{{ f.id }}" routerLinkActive="active">Edit</button></th>
-      <th><button (click)="delete(d.id)">Delete</button></th>
+      <th><button (click)="delete(f.id)">Delete</button></th>
     </tr>
     
   </tbody>
