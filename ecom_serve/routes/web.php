@@ -29,14 +29,26 @@ Route::get('escuela/show/{id}',"EscuelaController@show");
 Route::get('facultad/index',"FacultadController@index");
 Route::get('facultad/show/{id}',"FacultadController@show");
 
-Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
-Route::get('/callback/{provider}', 'SocialController@callback');
+Route::get('persona/index',"PersonaController@index");
+Route::get('persona/show/{id}',"PersonaController@show");
 
+Route::get('egresado/index',"EgresadoController@index");
+Route::get('egresado/show/{id}',"EgresadoController@show");
 
-Auth::routes();
+Route::get('experiencia/index',"ExperienciaController@index");
+Route::get('experiencia/show/{id}',"ExperienciaController@show");
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('formacion/index',"FormacionController@index");
+Route::get('formacion/show/{id}',"FormacionController@show");
 
-Auth::routes();
+Route::get('empresa/index',"EmpresaController@index");
+Route::get('empresa/show/{id}',"EmpresaController@show"); 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('comentario/index',"ComentariosController@index");
+Route::get('comentario/show/{id}',"ComentariosController@show"); 
+
+Route::get('oferta/index',"OfertaController@index");
+Route::get('oferta/show/{id}',"OfertaController@show"); 
+
+Route::get('rol/index',"RolController@index");
+Route::get('rol/show/{id}',"RolController@show"); 

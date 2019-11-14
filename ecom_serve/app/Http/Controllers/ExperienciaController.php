@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Experiencia;
 
-use App\Escuela;
-class EscuelaController extends Controller
+class ExperienciaController extends Controller
 {
+    
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -17,14 +20,14 @@ class EscuelaController extends Controller
         //
         //if($clientes.usuario=="alum"){
         //}
-        $escuela = Escuela::all(); 
+        $experiencia = Experiencia::all(); 
         //foreach($clientes as $cliente){
         //    echo $cliente->nombre."</br>";        
         //}
         // return response()->json(['success' => true,
         //    'data' => $clientes,
         //    'message' => 'Operacion Correcta'], 200);
-        return response()->json($escuela);
+        return response()->json($experiencia);
     }
 
     /**
@@ -37,7 +40,7 @@ class EscuelaController extends Controller
         //$d = new \stdClass();
         //$d->titulo = $request->input('titulo');
         //$d->descripcion = $request->input('descripcion');
-        Escuela::create($request->all());
+        Experiencia::create($request->all());
         return response()->json(['success' => true]);
     }
 
@@ -61,12 +64,12 @@ class EscuelaController extends Controller
     public function show($id)
     {
         //
-        $escuela= Escuela::findOrFail($id);
+        $experiencia= Experiencia::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
         //echo "$cliente->direccion<br>";
-        return response()->json($escuela);
+        return response()->json($experiencia);
     }
 
     /**
@@ -90,7 +93,7 @@ class EscuelaController extends Controller
     public function update(Request $request, $id)
     {
         
-        Escuela::findOrFail($id)->update($request->all());
+        Experiencia::findOrFail($id)->update($request->all());
             return response()->json(['success' => true]);
         
 
@@ -106,7 +109,7 @@ class EscuelaController extends Controller
      */
     public function destroy($id)
     {
-        Escuela::findOrFail($id)->delete();
+        Experiencia::findOrFail($id)->delete();
         return response()->json(['success' => true]);
     }
 }

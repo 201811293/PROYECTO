@@ -37,16 +37,16 @@ class ClienteController extends Controller
         //$d = new \stdClass();
         //$d->titulo = $request->input('titulo');
         //$d->descripcion = $request->input('descripcion');
-        $clients = new Cliente;
+        $clientes = new Cliente;
 
-        $clients->nombre = $request->input('nombre');
-        $clients->apellido = $request->input('apellido');
-        $clients->telefono = $request->input('telefono');
-        $clients->direccion = $request->input('direccion');
-        $clients->sexo = $request->input('sexo');
+        $clientes->nombre = $request->input('nombre');
+        $clientes->apellido = $request->input('apellido');
+        $clientes->telefono = $request->input('telefono');
+        $clientes->direccion = $request->input('direccion');
+        $clientes->sexo = $request->input('sexo');
         
-        $clients->save();
-        return response()->json($clients);
+        $clientes->save();
+        return response()->json($clientes);
     }
 
     /**
@@ -69,12 +69,12 @@ class ClienteController extends Controller
     public function show($id)
     {
         //
-        $cliente= Cliente::findOrFail($id);
+        $clientes= Cliente::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
         //echo "$cliente->direccion<br>";
-        return response()->json($cliente);
+        return response()->json($clientes);
     }
 
     /**

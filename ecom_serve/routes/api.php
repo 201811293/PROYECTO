@@ -46,3 +46,51 @@ Route::get('escuela/{id}', 'EscuelaController@show');
 Route::post('escuela', 'EscuelaController@create');
 Route::put('escuela/{id}', 'EscuelaController@update');
 Route::delete('escuela/{id}', 'EscuelaController@destroy');
+
+Route::get('persona', 'PersonaController@index');
+Route::get('persona/{id}', 'PersonaController@show');
+Route::post('persona', 'PersonaController@create');
+Route::put('persona/{id}', 'PersonaController@update');
+Route::delete('persona/{id}', 'PersonaController@destroy');
+
+Route::get('egresado', 'EgresadoController@index');
+Route::get('egresado/{id}', 'EgresadoController@show');
+Route::post('egresado', 'EgresadoController@create');
+Route::put('egresado/{id}', 'EgresadoController@update');
+Route::delete('egresado/{id}', 'EgresadoController@destroy');
+
+Route::get('experiencia', 'ExperienciaController@index');
+Route::get('experiencia/{id}', 'ExperienciaController@show');
+Route::post('experiencia', 'ExperienciaController@create');
+Route::put('experiencia/{id}', 'ExperienciaController@update');
+Route::delete('experiencia/{id}', 'ExperienciaController@destroy');
+
+Route::get('formacion', 'FormacionController@index');
+Route::get('formacion/{id}', 'FormacionController@show');
+Route::post('formacion', 'FormacionController@create');
+Route::put('formacion/{id}', 'FormacionController@update');
+Route::delete('formacion/{id}', 'FormacionController@destroy');
+
+Route::get('empresa', 'EmpresaController@index');
+Route::get('empresa/{id}', 'EmpresaController@show');
+Route::post('empresa', 'EmpresaController@create');
+Route::put('empresa/{id}', 'EmpresaController@update');
+Route::delete('empresa/{id}', 'EmpresaController@destroy');
+
+Route::get('comentario', 'ComentariosController@index');
+Route::get('comentario/{id}', 'ComentariosController@show');
+Route::post('comentario', 'ComentariosController@create');
+Route::put('comentario/{id}', 'ComentariosController@update');
+Route::delete('comentario/{id}', 'ComentariosController@destroy');
+
+Route::get('oferta', 'OfertaController@index');
+Route::get('oferta/{id}', 'OfertaController@show');
+Route::post('oferta', 'OfertaController@create');
+Route::put('oferta/{id}', 'OfertaController@update');
+Route::delete('oferta/{id}', 'OfertaController@destroy');
+
+Route::get('rol', 'RolController@index');
+Route::get('rol/{id}', 'RolController@show');
+Route::post('rol', 'RolController@create');
+Route::put('rol/{id}', 'RolController@update');
+Route::delete('rol/{id}', 'RolController@destroy');

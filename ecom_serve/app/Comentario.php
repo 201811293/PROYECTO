@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Escuela extends Model
+class Comentario extends Model
 {
     public $timestamps = false;
     protected $guarded = ["id"];
-    protected $table = 'escuela_prof';
+    protected $table = 'comentarios_sugerencia';
 }
