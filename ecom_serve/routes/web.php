@@ -27,7 +27,7 @@ Route::get('escuela/index',"EscuelaController@index");
 Route::get('escuela/show/{id}',"EscuelaController@show");
 
 Route::get('facultad/index',"FacultadController@index");
-Route::get('facultad/show/{id}',"FacultadController@show");
+Route::get('facultad/show/{facultad_id}',"FacultadController@show");
 
 Route::get('persona/index',"PersonaController@index");
 Route::get('persona/show/{id}',"PersonaController@show");

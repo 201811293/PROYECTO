@@ -59,10 +59,10 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($facultad_id)
     {
         //
-        $facultad= Facultad::findOrFail($id);
+        $facultad= Facultad::findOrFail($facultad_id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
@@ -76,7 +76,7 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($facultad_id)
     {
         //
     }
@@ -88,10 +88,10 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $facultad_id)
     {
         
-        Facultad::findOrFail($id)->update($request->all());
+        Facultad::findOrFail($facultad_id)->update($request->all());
             return response()->json(['success' => true]);       
     }
     /**
@@ -100,9 +100,9 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($facultad_id)
     {
-        Facultad::findOrFail($id)->delete();
+        Facultad::findOrFail($facultad_id)->delete();
         return response()->json(['success' => true]);
     }
 }

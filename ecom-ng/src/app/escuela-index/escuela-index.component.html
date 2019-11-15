@@ -35,8 +35,8 @@
       <tr>
         <th scope="col">{{ i+1}}</th>
         <th scope="col">{{ e.id }}</th>
-        <th scope="col">{{ e.nombre }}</th>
-        <th scope="col">{{ e.esta_acre }}</th>
+        <th scope="col">{{ e.Escuela_prof_nombre }}</th>
+        <th scope="col">{{ e.Escuela_prof_acreditada }}</th>
 
         <th scope="col"><button routerLink="/escuelaform/{{ e.id }}" routerLinkActive="active">Edit</button></th>
         <th><button (click)="delete(e.id)">Delete</button></th>

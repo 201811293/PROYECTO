@@ -36,10 +36,10 @@ Route::put('cliente/{id}', 'ClienteController@update');
 Route::delete('cliente/{id}', 'ClienteController@destroy');
 
 Route::get('facultad', 'FacultadController@index');
-Route::get('facultad/{id}', 'FacultadController@show');
+Route::get('facultad/{facultad_id}', 'FacultadController@show');
 Route::post('facultad', 'FacultadController@create');
-Route::put('facultad/{id}', 'FacultadController@update');
-Route::delete('facultad/{id}', 'FacultadController@destroy');
+Route::put('facultad/{facultad_id}', 'FacultadController@update');
+Route::delete('facultad/{facultad_id}', 'FacultadController@destroy');
 
 Route::get('escuela', 'EscuelaController@index');
 Route::get('escuela/{id}', 'EscuelaController@show');
