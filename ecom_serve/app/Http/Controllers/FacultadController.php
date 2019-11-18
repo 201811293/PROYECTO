@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-
 use App\Facultad;
+
 class FacultadController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -59,10 +59,10 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($facultad_id)
+    public function show($id)
     {
         //
-        $facultad= Facultad::findOrFail($facultad_id);
+        $facultad= Facultad::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
@@ -76,7 +76,7 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($facultad_id)
+    public function edit($id)
     {
         //
     }
@@ -88,21 +88,26 @@ class FacultadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $facultad_id)
+    public function update(Request $request, $id)
     {
         
-        Facultad::findOrFail($facultad_id)->update($request->all());
-            return response()->json(['success' => true]);       
+        Facultad::findOrFail($id)->update($request->all());
+            return response()->json(['success' => true]);
+        
+
+        
+        
     }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($facultad_id)
+    public function destroy($id)
     {
-        Facultad::findOrFail($facultad_id)->delete();
+        Facultad::findOrFail($id)->delete();
         return response()->json(['success' => true]);
     }
 }

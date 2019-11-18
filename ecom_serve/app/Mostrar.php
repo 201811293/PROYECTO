@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Facultad extends Model
+class Mostrar extends Model
 {
     public $timestamps = false;
-    protected $guarded = ["id"];
-    protected $table = 'facultad';
+    protected $primaryKey = ["id"];
+    protected $view = 'formacion';
 }

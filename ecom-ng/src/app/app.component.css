@@ -1,15 +1,9 @@
-.nav-item nav-link {
-    width: 100%;
-}
-.navbar navbar-dark bg-dark  {
-    width: 100%;
-    
-}
-#navbarNavAltMarkup{
-    width: 100%;
-
-}
-.container{
-    margin: 10 px ;
+.container-fluid{
+    margin-top: 200 px !important;
     box-shadow: 10px;
 }
+/*.hola{
+    border: red 2px solid;
+    background-color: black ;
+    margin-bottom: 0%;
+  }*/

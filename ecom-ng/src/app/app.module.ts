@@ -23,6 +23,7 @@ import { EscuelaFormComponent } from './escuela-form/escuela-form.component';
 
 import { FaculIndexComponent } from './facul-index/facul-index.component';
 import { FaculFormComponent } from './facul-form/facul-form.component';
+import { BuscadorIndexComponent } from './buscador-index/buscador-index.component';
 
 
 
@@ -46,6 +47,8 @@ const appRoutes: Routes = [
   { path: 'facultad',  component: FaculIndexComponent },
   { path: 'faculform',  component: FaculFormComponent },
   { path: 'faculform/:id',  component: FaculFormComponent },
+
+  { path: 'buscador',  component: BuscadorIndexComponent },
   
 
   
@@ -69,6 +72,7 @@ const appRoutes: Routes = [
     FaculIndexComponent,
     EscuelaFormComponent,
     FaculFormComponent,
+    BuscadorIndexComponent,
 
   ],
   imports: [

@@ -20,10 +20,11 @@ export class EscuelaFormComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.escuelaForm = this.formBuild.group({
-      esta_acre: ['', [Validators.required]],
-      nombre: ['', [Validators.required]],
+      
       id: [''],
-      facultad_Id: ['', [Validators.required]],
+      escuela_prof_acreditada: ['', [Validators.required]],
+      escuela_prof_nombre: ['', [Validators.required]],
+      facultad_id: ['', [Validators.required]],
       
     });
     const id = this.route.snapshot.paramMap.get('id');

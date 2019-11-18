@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Empresa;
+use App\Mostrar;
 
-class EmpresaController extends Controller
-{    
+class MostrarController extends Controller
+{
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -17,14 +19,14 @@ class EmpresaController extends Controller
         //
         //if($clientes.usuario=="alum"){
         //}
-        $empresa = Empresa::all(); 
+        $local_preview = Mostrar::all(); 
         //foreach($clientes as $cliente){
         //    echo $cliente->nombre."</br>";        
         //}
         // return response()->json(['success' => true,
         //    'data' => $clientes,
         //    'message' => 'Operacion Correcta'], 200);
-        return response()->json($empresa);
+        return response()->json($local_preview);
     }
 
     /**
@@ -37,7 +39,7 @@ class EmpresaController extends Controller
         //$d = new \stdClass();
         //$d->titulo = $request->input('titulo');
         //$d->descripcion = $request->input('descripcion');
-        Empresa::create($request->all());
+        Mostrar::create($request->all());
         return response()->json(['success' => true]);
     }
 
@@ -61,12 +63,12 @@ class EmpresaController extends Controller
     public function show($id)
     {
         //
-        $empresa= Empresa::findOrFail($id);
+        $local_preview= Mostrar::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
         //echo "$cliente->direccion<br>";
-        return response()->json($empresa);
+        return response()->json($local_preview);
     }
 
     /**
@@ -90,8 +92,11 @@ class EmpresaController extends Controller
     public function update(Request $request, $id)
     {
         
-        Empresa::findOrFail($id)->update($request->all());
+        Mostrar::findOrFail($id)->update($request->all());
             return response()->json(['success' => true]);
+        
+
+        
         
     }
 
@@ -103,7 +108,7 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        Empresa::findOrFail($id)->delete();
+        Mostrar::findOrFail($id)->delete();
         return response()->json(['success' => true]);
     }
 }

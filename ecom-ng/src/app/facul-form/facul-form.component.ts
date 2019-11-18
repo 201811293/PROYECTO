@@ -22,8 +22,10 @@ export class FaculFormComponent implements OnInit {
     ) {}
     ngOnInit() {
       this.faculForm = this.formBuild.group({
-        nombre: ['', [Validators.required]],
         id: [''],
+        facultad_nombre: ['', [Validators.required]],
+        facultad_sede: ['', [Validators.required]],
+        
       });
       const id = this.route.snapshot.paramMap.get('id');
       if (id != null) {
