@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BuscadorService } from '../services/buscador.service';
+import { IndiceService } from '../services/indice.service';
 
 @Component({
-  selector: 'app-buscador-index',
-  templateUrl: './buscador-index.component.html',
-  styleUrls: ['./buscador-index.component.css']
+  selector: 'app-indice-index',
+  templateUrl: './indice-index.component.html',
+  styleUrls: ['./indice-index.component.css']
 })
-export class BuscadorIndexComponent implements OnInit {
+export class IndiceIndexComponent implements OnInit {
+
 
   list;
   constructor(
     private route: ActivatedRoute,
-    private buscadorService: BuscadorService,
+    private indiceService: IndiceService,
   ) {
     this.getList();
   }
@@ -20,13 +21,13 @@ export class BuscadorIndexComponent implements OnInit {
     this.getList();
   }
   private getList() {
-    this.buscadorService.getList().subscribe(response => {
+    this.indiceService.getList().subscribe(response => {
       this.list=response;
     });
   }
   delete(id) {
     console.log("delete:"+id);
-    this.buscadorService.delete(id).subscribe(response => {
+    this.indiceService.delete(id).subscribe(response => {
       console.log("de = " + JSON.stringify(response));
       this.getList();
     });

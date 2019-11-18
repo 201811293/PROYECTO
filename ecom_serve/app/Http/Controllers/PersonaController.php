@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mostrar;
 
-class MostrarController extends Controller
-{
-    
-    
+use App\Persona;
+
+class PersonaController extends Controller
+{       
     /**
      * Display a listing of the resource.
      *
@@ -19,14 +18,14 @@ class MostrarController extends Controller
         //
         //if($clientes.usuario=="alum"){
         //}
-        $local_view = Mostrar::all(); 
+        $persona = Persona::all(); 
         //foreach($clientes as $cliente){
         //    echo $cliente->nombre."</br>";        
         //}
         // return response()->json(['success' => true,
         //    'data' => $clientes,
         //    'message' => 'Operacion Correcta'], 200);
-        return response()->json($local_view);
+        return response()->json($persona);
     }
 
     /**
@@ -39,7 +38,7 @@ class MostrarController extends Controller
         //$d = new \stdClass();
         //$d->titulo = $request->input('titulo');
         //$d->descripcion = $request->input('descripcion');
-        Mostrar::create($request->all());
+        Persona::create($request->all());
         return response()->json(['success' => true]);
     }
 
@@ -63,12 +62,12 @@ class MostrarController extends Controller
     public function show($id)
     {
         //
-        $local_view= Mostrar::findOrFail($id);
+        $persona= Persona::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
         //echo "$cliente->direccion<br>";
-        return response()->json($local_view);
+        return response()->json($persona);
     }
 
     /**
@@ -92,7 +91,7 @@ class MostrarController extends Controller
     public function update(Request $request, $id)
     {
         
-        Mostrar::findOrFail($id)->update($request->all());
+        Persona::findOrFail($id)->update($request->all());
             return response()->json(['success' => true]);
         
 
@@ -108,7 +107,7 @@ class MostrarController extends Controller
      */
     public function destroy($id)
     {
-        Mostrar::findOrFail($id)->delete();
+        Persona::findOrFail($id)->delete();
         return response()->json(['success' => true]);
     }
 }
