@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mostrar;
+use Illuminate\Support\Facades\DB;
 
 class MostrarController extends Controller
 {
@@ -16,17 +17,13 @@ class MostrarController extends Controller
      */
     public function index()
     {
-        //
-        //if($clientes.usuario=="alum"){
-        //}
-        $local_view = Mostrar::all(); 
-        //foreach($clientes as $cliente){
-        //    echo $cliente->nombre."</br>";        
-        //}
-        // return response()->json(['success' => true,
-        //    'data' => $clientes,
-        //    'message' => 'Operacion Correcta'], 200);
-        return response()->json($local_view);
+        $egresa = DB::table('egresado')
+        ->join('persona' , 'persona.id' , 'egresado.persona_id')
+        ->join('escuela_prof','escuela_prof.id','egresado.escuela_prof_id')
+        ->join('facultad','facultad.id','escuela_prof.facultad_id')
+        ->select('persona.id','egresado.egresado_codigo','persona.persona_nombre','persona_apellido_pat','facultad.facultad_nombre','facultad.facultad_sede')
+        ->get();
+        return response()->json($egresa);
     }
 
     /**
