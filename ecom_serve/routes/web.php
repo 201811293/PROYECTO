@@ -23,13 +23,13 @@ Route::get('cliente/index',"ClienteController@index");
 Route::get('cliente/show/{id}',"ClienteController@show");
 
 Route::get('facultad/index',"FacultadController@index");
-Route::get('facultad/show/{id}',"FacultadController@show");
+Route::get('facultad/show/{facultad_id}',"FacultadController@show");
 
 Route::get('escuela/index',"EscuelaController@index");
 Route::get('escuela/show/{id}',"EscuelaController@show");
 
 Route::get('persona/index',"PersonaController@index");
-Route::get('persona/show/{id}',"PersonaController@show");
+Route::get('persona/show/{persona_id}',"PersonaController@show");
 
 Route::get('egresado/index',"EgresadoController@index");
 Route::get('egresado/show/{id}',"EgresadoController@show");

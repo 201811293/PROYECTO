@@ -36,10 +36,10 @@ Route::put('cliente/{id}', 'ClienteController@update');
 Route::delete('cliente/{id}', 'ClienteController@destroy');
 
 Route::get('facultad', 'FacultadController@index');
-Route::get('facultad/{id}', 'FacultadController@show');
+Route::get('facultad/{facultad_id}', 'FacultadController@show');
 Route::post('facultad', 'FacultadController@create');
-Route::put('facultad/{id}', 'FacultadController@update');
-Route::delete('facultad/{id}', 'FacultadController@destroy');
+Route::put('facultad/{facultad_id}', 'FacultadController@update');
+Route::delete('facultad/{facultad_id}', 'FacultadController@destroy');
 
 Route::get('escuela', 'EscuelaController@index');
 Route::get('escuela/{id}', 'EscuelaController@show');
@@ -48,10 +48,10 @@ Route::put('escuela/{id}', 'EscuelaController@update');
 Route::delete('escuela/{id}', 'EscuelaController@destroy');
 
 Route::get('persona', 'PersonaController@index');
-Route::get('persona/{id}', 'PersonaController@show');
+Route::get('persona/{persona_id}', 'PersonaController@show');
 Route::post('persona', 'PersonaController@create');
-Route::put('persona/{id}', 'PersonaController@update');
-Route::delete('persona/{id}', 'PersonaController@destroy');
+Route::put('persona/{persona_id}', 'PersonaController@update');
+Route::delete('persona/{persona_id}', 'PersonaController@destroy');
 
 Route::get('egresado', 'EgresadoController@index');
 Route::get('egresado/{id}', 'EgresadoController@show');

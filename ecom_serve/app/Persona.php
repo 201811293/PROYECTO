@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Persona extends Model
 {
     public $timestamps = false;
-    protected $guarded = ["id"];
+    protected $primaryKey = 'persona_id';
     protected $table = 'persona';
 }

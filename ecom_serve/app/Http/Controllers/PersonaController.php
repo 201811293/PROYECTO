@@ -59,10 +59,10 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($persona_id)
     {
         //
-        $persona= Persona::findOrFail($id);
+        $persona= Persona::findOrFail($persona_id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
@@ -76,7 +76,7 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($persona_id)
     {
         //
     }
@@ -88,10 +88,10 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $persona_id)
     {
         
-        Persona::findOrFail($id)->update($request->all());
+        Persona::findOrFail($persona_id)->update($request->all());
             return response()->json(['success' => true]);
         
 
@@ -105,9 +105,9 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($persona_id)
     {
-        Persona::findOrFail($id)->delete();
+        Persona::findOrFail($persona_id)->delete();
         return response()->json(['success' => true]);
     }
 }
