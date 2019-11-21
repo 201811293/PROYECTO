@@ -14,8 +14,20 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ClienteIndexComponent } from './cliente-index/cliente-index.component';
+
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { TrabajoFormComponent } from './trabajo-form/trabajo-form.component';
+
+import { EscuelaIndexComponent } from './escuela-index/escuela-index.component';
+import { EscuelaFormComponent } from './escuela-form/escuela-form.component';
+
+import { FaculIndexComponent } from './facul-index/facul-index.component';
+import { FaculFormComponent } from './facul-form/facul-form.component';
+
+import { BuscadorIndexComponent } from './buscador-index/buscador-index.component';
+
+import { IndiceIndexComponent } from './indice-index/indice-index.component';
+
 
 
 const appRoutes: Routes = [
@@ -31,6 +43,20 @@ const appRoutes: Routes = [
   { path: 'trabajoform',  component: TrabajoFormComponent },
   { path: 'trabajoform/:id',  component: TrabajoFormComponent },
 
+  { path: 'escuela',  component: EscuelaIndexComponent },
+  { path: 'escuelaform',  component: EscuelaFormComponent },
+  { path: 'escuelaform/:id',  component: EscuelaFormComponent },
+
+  { path: 'facultad',  component: FaculIndexComponent },
+  { path: 'faculform',  component: FaculFormComponent },
+  { path: 'faculform/:id',  component: FaculFormComponent },
+
+  { path: 'buscador',  component: BuscadorIndexComponent },
+
+  { path: 'indice',  component: IndiceIndexComponent },
+  
+
+  
   { path: '**', component: PageNotFoundComponent },
 
 ];
@@ -46,7 +72,13 @@ const appRoutes: Routes = [
     ShippingComponent,
     ClienteIndexComponent,
     ClienteFormComponent,
-    TrabajoFormComponent
+    TrabajoFormComponent,
+    EscuelaIndexComponent,
+    FaculIndexComponent,
+    EscuelaFormComponent,
+    FaculFormComponent,
+    BuscadorIndexComponent,
+    IndiceIndexComponent,
 
   ],
   imports: [

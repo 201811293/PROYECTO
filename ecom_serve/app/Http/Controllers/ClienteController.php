@@ -17,14 +17,14 @@ class ClienteController extends Controller
         //
         //if($clientes.usuario=="alum"){
         //}
-        $clientes = Cliente::all(); 
+        $client = Cliente::all(); 
         //foreach($clientes as $cliente){
         //    echo $cliente->nombre."</br>";        
         //}
         // return response()->json(['success' => true,
         //    'data' => $clientes,
         //    'message' => 'Operacion Correcta'], 200);
-        return response()->json($clientes);
+        return response()->json($client);
     }
 
     /**
@@ -37,16 +37,16 @@ class ClienteController extends Controller
         //$d = new \stdClass();
         //$d->titulo = $request->input('titulo');
         //$d->descripcion = $request->input('descripcion');
-        $clients = new Cliente;
+        $client = new Cliente;
 
-        $clients->nombre = $request->input('nombre');
-        $clients->apellido = $request->input('apellido');
-        $clients->telefono = $request->input('telefono');
-        $clients->direccion = $request->input('direccion');
-        $clients->sexo = $request->input('sexo');
+        $client->nombre = $request->input('nombre');
+        $client->apellido = $request->input('apellido');
+        $client->telefono = $request->input('telefono');
+        $client->direccion = $request->input('direccion');
+        $client->sexo = $request->input('sexo');
         
-        $clients->save();
-        return response()->json($clients);
+        $client->save();
+        return response()->json($client);
     }
 
     /**
@@ -69,12 +69,12 @@ class ClienteController extends Controller
     public function show($id)
     {
         //
-        $cliente= Cliente::findOrFail($id);
+        $client= Cliente::findOrFail($id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
         //echo "$cliente->direccion<br>";
-        return response()->json($cliente);
+        return response()->json($client);
     }
 
     /**
