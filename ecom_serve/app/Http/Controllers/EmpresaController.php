@@ -58,10 +58,10 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($empresa_id)
     {
         //
-        $empresa= Empresa::findOrFail($id);
+        $empresa= Empresa::findOrFail($empresa_id);
         //echo "$cliente->nombre<br>";
         //echo "$cliente->apellido<br>";
         //echo "$cliente->telefono<br>";
@@ -75,7 +75,7 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($empresa_id)
     {
         //
     }
@@ -87,10 +87,10 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $empresa_id)
     {
         
-        Empresa::findOrFail($id)->update($request->all());
+        Empresa::findOrFail($empresa_id)->update($request->all());
             return response()->json(['success' => true]);
         
     }
@@ -101,9 +101,9 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($empresa_id)
     {
-        Empresa::findOrFail($id)->delete();
+        Empresa::findOrFail($empresa_id)->delete();
         return response()->json(['success' => true]);
     }
 }

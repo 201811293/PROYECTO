@@ -41,7 +41,7 @@ Route::get('formacion/index',"FormacionController@index");
 Route::get('formacion/show/{id}',"FormacionController@show");
 
 Route::get('empresa/index',"EmpresaController@index");
-Route::get('empresa/show/{id}',"EmpresaController@show"); 
+Route::get('empresa/show/{empresa_id}',"EmpresaController@show"); 
 
 Route::get('comentario/index',"ComentariosController@index");
 Route::get('comentario/show/{id}',"ComentariosController@show"); 

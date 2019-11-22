@@ -72,10 +72,10 @@ Route::put('formacion/{id}', 'FormacionController@update');
 Route::delete('formacion/{id}', 'FormacionController@destroy');
 
 Route::get('empresa', 'EmpresaController@index');
-Route::get('empresa/{id}', 'EmpresaController@show');
+Route::get('empresa/{empresa_id}', 'EmpresaController@show');
 Route::post('empresa', 'EmpresaController@create');
-Route::put('empresa/{id}', 'EmpresaController@update');
-Route::delete('empresa/{id}', 'EmpresaController@destroy');
+Route::put('empresa/{empresa_id}', 'EmpresaController@update');
+Route::delete('empresa/{empresa_id}', 'EmpresaController@destroy');
 
 Route::get('comentario', 'ComentariosController@index');
 Route::get('comentario/{id}', 'ComentariosController@show');
